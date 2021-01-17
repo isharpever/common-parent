@@ -180,17 +180,6 @@
                 <version>2.1</version>
             </dependency>
 
-            <dependency>
-                <groupId>jdk.tools</groupId>
-                <artifactId>jdk.tools</artifactId>
-                <version>${java.version}</version>
-                <scope>system</scope>
-                <systemPath>${JAVA_HOME}/lib/tools.jar
-                </systemPath>
-                <!--<systemPath>/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/lib/tools.jar-->
-                <!--</systemPath>-->
-            </dependency>
-
             <!-- rocketmq -->
             <dependency>
                 <groupId>org.apache.rocketmq</groupId>
