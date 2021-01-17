@@ -25,12 +25,11 @@
 
         <mysql.version>5.1.35</mysql.version>
         <jedis.version>2.9.0</jedis.version>
-        <rocketmq.version>3.1.4</rocketmq.version>
+        <rocketmq.version>4.8.0</rocketmq.version>
         <commons-collections4.version>4.1</commons-collections4.version>
         <commons-lang.version>3.4</commons-lang.version>
         <hibernate-validator.version>4.3.2.Final</hibernate-validator.version>
-        <dubbo.version>2.5.6.2-D-RELEASE</dubbo.version>
-        <dubbo-m2.version>2.5.7-SNAPSHOT</dubbo-m2.version>
+        <dubbo.version>2.7.8</dubbo.version>
         <httpclient.version>4.4.1</httpclient.version>
         <mybatis.spring.starter.version>1.1.1</mybatis.spring.starter.version>
         <mybatis.version>3.4.2</mybatis.version>
@@ -41,146 +40,18 @@
         <fastjson.version>1.2.70</fastjson.version>
 
         <valiant-service-api.version>1.0.0</valiant-service-api.version>
-        <dianwoba.genius.version>2.0.0</dianwoba.genius.version>
 
-        <dubbo.integration.version>0.0.2-SNAPSHOT</dubbo.integration.version>
         <validation.api.version>1.0.0.GA</validation.api.version>
         <guava.version>18.0</guava.version>
         <zkclient.version>0.4</zkclient.version>
-        <treasure.version>0.0.1-SNAPSHOT</treasure.version>
-        <monitor-client.version>2.1.0-SNAPSHOT</monitor-client.version>
         <message.api.version>2.0.0-SNAPSHOT</message.api.version>
-        <dispatch-provider-api>1.0.1</dispatch-provider-api>
-        <dianwoba.dubbo.base.version>1.0.3</dianwoba.dubbo.base.version>
-        <dianwoba.monitor.version>1.0-SNAPSHOT</dianwoba.monitor.version>
-        <dianwoba.monitor.redis>${dianwoba.monitor.version}</dianwoba.monitor.redis>
-        <dianwoba.monitor.mongodb>${dianwoba.monitor.version}</dianwoba.monitor.mongodb>
-        <dianwoba.monitor.druid>${dianwoba.monitor.version}</dianwoba.monitor.druid>
-        <universe-commons-exception.version>1.1.0-SNAPSHOT</universe-commons-exception.version>
         <goodjob-node.version>1.0.2-SNAPSHOT</goodjob-node.version>
-        <rocketmq-spring-boot-starter>0.0.1-SNAPSHOT</rocketmq-spring-boot-starter>
-        <jmonitor.version>1.0.0-SNAPSHOT</jmonitor.version>
         <lombok.version>1.16.22</lombok.version>
-        <logappender-rocketmq-log4j2.version>1.0.0-SNAPSHOT</logappender-rocketmq-log4j2.version>
-        <monitorAdvice.version>1.0.0-SNAPSHOT</monitorAdvice.version>
         <disconf-client.version>2.6.36-custom-config-SNAPSHOT</disconf-client.version>
-        <universe-disconf-support.version>1.0.0-SNAPSHOT</universe-disconf-support.version>
-
-        <spring-boot.version>1.4.2.RELEASE</spring-boot.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-
-            <!-- dianwoba own -->
-            <dependency>
-                <groupId>com.dianwoba</groupId>
-                <artifactId>dubbo-base</artifactId>
-                <version>${dianwoba.dubbo.base.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.dianwoba</groupId>
-                <artifactId>genius-common</artifactId>
-                <version>${dianwoba.genius.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.dianwoba.wireless</groupId>
-                <artifactId>dubbo-integration</artifactId>
-                <version>${dubbo.integration.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.dianwoba.wireless</groupId>
-                <artifactId>wireless-treasure</artifactId>
-                <version>${treasure.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.dianwoba.monitor</groupId>
-                <artifactId>monitor-client</artifactId>
-                <version>${monitor-client.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.dianwoba</groupId>
-                <artifactId>message-api</artifactId>
-                <version>${message.api.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.dianwoba.universe</groupId>
-                <artifactId>universe-commons-exception</artifactId>
-                <version>${universe-commons-exception.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.dianwoba</groupId>
-                <artifactId>spring-boot-starter-monitor-redis</artifactId>
-                <version>${dianwoba.monitor.redis}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.dianwoba</groupId>
-                <artifactId>spring-boot-starter-monitor-mongodb</artifactId>
-                <version>${dianwoba.monitor.mongodb}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.dianwoba</groupId>
-                <artifactId>spring-boot-starter-monitor-druid</artifactId>
-                <version>${dianwoba.monitor.druid}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.dianwoba.pt</groupId>
-                <artifactId>goodjob-node</artifactId>
-                <version>${goodjob-node.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.dianwoba.monitor</groupId>
-                <artifactId>jmonitor</artifactId>
-                <version>${jmonitor.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <artifactId>slf4j-log4j12</artifactId>
-                        <groupId>org.slf4j</groupId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-
-            <dependency>
-                <groupId>com.dianwoba.ylzx</groupId>
-                <artifactId>logappender-rocketmq-log4j2</artifactId>
-                <version>${logappender-rocketmq-log4j2.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>com.alibaba</groupId>
-                        <artifactId>dubbo-m2</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-
-            <dependency>
-                <groupId>com.dianwoba.ylzx</groupId>
-                <artifactId>monitorAdvice</artifactId>
-                <version>${monitorAdvice.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>com.alibaba</groupId>
-                        <artifactId>dubbo-m2</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-
-            <dependency>
-                <groupId>com.dianwoba.universe</groupId>
-                <artifactId>universe-disconf-support</artifactId>
-                <version>${universe-disconf-support.version}</version>
-            </dependency>
-
             <dependency>
                 <groupId>javax.validation</groupId>
                 <artifactId>validation-api</artifactId>
@@ -237,20 +108,9 @@
 
             <!-- Dubbo -->
             <dependency>
-                <groupId>com.alibaba</groupId>
+                <groupId>org.apache.dubbo</groupId>
                 <artifactId>dubbo</artifactId>
                 <version>${dubbo.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.springframework</groupId>
-                        <artifactId>spring</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>dubbo-m2</artifactId>
-                <version>${dubbo-m2.version}</version>
             </dependency>
 
             <!-- Mybatis dependencies -->
@@ -333,15 +193,9 @@
 
             <!-- rocketmq -->
             <dependency>
-                <groupId>com.alibaba.rocketmq</groupId>
+                <groupId>org.apache.rocketmq</groupId>
                 <artifactId>rocketmq-client</artifactId>
                 <version>${rocketmq.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.dianwoba.wireless</groupId>
-                <artifactId>rocketmq-spring-boot-starter</artifactId>
-                <version>${rocketmq-spring-boot-starter}</version>
             </dependency>
 
             <!-- DB -->
